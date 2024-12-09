@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "openrouter-author"
+version = "0.1.0"
+description = "A tool for writing long form, multi-chapter stories using OpenRouter API"
+authors = ["Your Name <your.email@example.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "openrouter_author"}]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+requests = "^2.31.0"
+pyyaml = "^6.0"
+click = "^8.1.7"
+rich = "^13.7.0"
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.12.0"
+isort = "^5.13.0"
+pytest = "^7.4.3"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+openrouter-author = "openrouter_author.cli:main"
